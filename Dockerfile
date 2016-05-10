@@ -6,4 +6,6 @@ RUN apt-get update \
   
 ADD rsyslog.conf /etc/rsyslog.conf
 
+EXPOSE 514 514/udp
+
 ENTRYPOINT [ "rsyslogd", "-n" ]
